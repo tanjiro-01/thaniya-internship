@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:med-app-secure – Secure Patient Medical Record Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>med-app-secure</span>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#timeline" class="nav-link">History</a>
+                <a href="#consent" class="nav-link">Access Control</a>
+                <a href="#emergency" class="nav-link">Emergency</a>
+                <a href="#privacy" class="nav-link">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="dashboard" class="section">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <p class="hero-kicker">Privacy-first medical records</p>
+                        <h1 class="hero-title">Own your health records — share only with consent.</h1>
+                        <p class="hero-subtitle">
+                            This is a UI/UX concept showing encrypted storage, consent-based access, and time-limited emergency access.
+                            Raw medical data is never displayed in this demo.
+                        </p>
+
+                        <div class="hero-search" role="group" aria-label="Find provider (conceptual search)">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search by hospital or doctor's practice (mock)" aria-label="Search providers (mock)">
+                            <button class="btn btn-primary hero-cta" type="button">Get Your Records</button>
+                        </div>
+                            
+                        <div class="hero-badges">
+                            <span class="pill"><i class="fas fa-lock"></i> Encrypted</span>
+                            <span class="pill"><i class="fas fa-hand-paper"></i> Consent required</span>
+                            <span class="pill"><i class="fas fa-eye-slash"></i> No raw data shown</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">
+                    <i class="fas fa-user-circle"></i>
+                    Patient Dashboard
+                </h2>
+                
+                <div class="dashboard-grid">
+                    <div class="card patient-card">
+                        <div class="card-header">
+                            <h2>Patient Information</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <span class="label">Patient Name</span>
+                                    <span class="value">Sarah Johnson</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-id-card"></i>
+                                <div>
+                                    <span class="label">Patient ID</span>
+                                    <span class="value">PAT-2024-7891</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <span class="label">Date of Birth</span>
+                                    <span class="value">March 15, 1985</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card security-card">
+                        <div class="card-header">
+                            <h2>Data Security Status</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="security-indicator">
+                                <i class="fas fa-lock"></i>
+                                <span class="status-text">Encrypted</span>
+                            </div>
+                            <div class="security-message">
+                                <p><strong>You fully own your medical data.</strong></p>
+                                <p>Access is granted only with your consent.</p>
+                            </div>
+                            <div class="security-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>End-to-end encryption</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Consent-based access</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Zero-knowledge architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <div class="container">
+                <h1 class="section-title">
+                    <i class="fas fa-history"></i>
+                    Medical History Timeline
+                </h1>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">March 20, 2024</span>
+                                <span class="encrypted-badge">
+                                    <i class="fas fa-lock"></i> Encrypted
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Lab Test Results</h3>
+                                <p class="timeline-location">
+                                    <i class="fas fa-hospital"></i> City Medical Laboratory
+                                </p>
+                                <p class="timeline-note">Complete blood count and metabolic panel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">February 15, 2024</span>
+                                <span class="encrypted-badge">
+                                    <i class="fas fa-lock"></i> Encrypted
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>CT Scan</h3>
+                                <p class="timeline-location">
+                                    <i class="fas fa-hospital"></i> Regional Imaging Center
+                                </p>
+                                <p class="timeline-note">Chest CT scan with contrast</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">February 10, 2024</span>
+                                <span class="encrypted-badge">
+                                    <i class="fas fa-lock"></i> Encrypted
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Prescription</h3>
+                                <p class="timeline-location">
+                                    <i class="fas fa-clinic-medical"></i> Family Care Clinic
+                                </p>
+                                <p class="timeline-note">Prescription medication issued</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker emergency">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">January 5, 2024</span>
+                                <span class="encrypted-badge">
+                                    <i class="fas fa-lock"></i> Encrypted
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Emergency Visit</h3>
+                                <p class="timeline-location">
+                                    <i class="fas fa-hospital"></i> City General Hospital
+                                </p>
+                                <p class="timeline-note">Emergency department visit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">December 20, 2023</span>
+                                <span class="encrypted-badge">
+                                    <i class="fas fa-lock"></i> Encrypted
+                                </span>
+                            </div>
+                            <div class="timeline-body">
+                                <h3>Annual Checkup</h3>
+                                <p class="timeline-location">
+                                    <i class="fas fa-clinic-medical"></i> Family Care Clinic
+                                </p>
+                                <p class="timeline-note">Routine physical examination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-note-box">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Note:</strong> All medical records are encrypted and stored securely. Raw medical data is never displayed or accessible without proper consent and authentication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="consent" class="section">
+            <div class="container">
+                <h1 class="section-title">
+                    <i class="fas fa-user-shield"></i>
+                    Consent & Access Control
+                </h1>
+                
+                <div class="access-control-grid">
+                    <div class="card access-card">
+                        <div class="card-header">
+                            <div class="access-header">
+                                <div>
+                                    <h3>Dr. Michael Chen</h3>
+                                    <p class="access-role">Cardiologist - Heart Care Center</p>
+                                </div>
+                                <span class="access-badge active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="access-details">
+                                <p><i class="fas fa-clock"></i> Access granted: March 18, 2024</p>
+                                <p><i class="fas fa-hourglass-half"></i> Duration: 24 hours</p>
+                                <p><i class="fas fa-calendar-check"></i> Expires: March 19, 2024</p>
+                            </div>
+                            <div class="toggle-container">
+                                <label class="toggle-label">Grant Access</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" class="access-toggle" data-doctor="Dr. Michael Chen" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card access-card">
+                        <div class="card-header">
+                            <div class="access-header">
+                                <div>
+                                    <h3>City General Hospital</h3>
+                                    <p class="access-role">Emergency Department</p>
+                                </div>
+                                <span class="access-badge inactive">Inactive</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="access-details">
+                                <p><i class="fas fa-clock"></i> Last access: February 15, 2024</p>
+                                <p><i class="fas fa-hourglass-half"></i> Duration: 48 hours</p>
+                                <p><i class="fas fa-ban"></i> Currently revoked</p>
+                            </div>
+                            <div class="toggle-container">
+                                <label class="toggle-label">Grant Access</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" class="access-toggle" data-doctor="City General Hospital">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card access-card">
+                        <div class="card-header">
+                            <div class="access-header">
+                                <div>
+                                    <h3>Dr. Emily Rodriguez</h3>
+                                    <p class="access-role">Primary Care Physician</p>
+                                </div>
+                                <span class="access-badge active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="access-details">
+                                <p><i class="fas fa-clock"></i> Access granted: March 20, 2024</p>
+                                <p><i class="fas fa-hourglass-half"></i> Duration: 72 hours</p>
+                                <p><i class="fas fa-calendar-check"></i> Expires: March 23, 2024</p>
+                            </div>
+                            <div class="toggle-container">
+                                <label class="toggle-label">Grant Access</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" class="access-toggle" data-doctor="Dr. Emily Rodriguez" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card access-card">
+                        <div class="card-header">
+                            <div class="access-header">
+                                <div>
+                                    <h3>Regional Imaging Center</h3>
+                                    <p class="access-role">Radiology Department</p>
+                                </div>
+                                <span class="access-badge inactive">Inactive</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="access-details">
+                                <p><i class="fas fa-clock"></i> Last access: February 15, 2024</p>
+                                <p><i class="fas fa-hourglass-half"></i> Duration: 12 hours</p>
+                                <p><i class="fas fa-ban"></i> Currently revoked</p>
+                            </div>
+                            <div class="toggle-container">
+                                <label class="toggle-label">Grant Access</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" class="access-toggle" data-doctor="Regional Imaging Center">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="emergency" class="section">
+            <div class="container">
+                <h1 class="section-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Emergency Access Mode
+                </h1>
+                
+                <div class="emergency-container">
+                    <div class="card emergency-card">
+                        <div class="card-body">
+                            <div class="emergency-info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Emergency access provides time-limited access to your medical records for emergency medical personnel. Access is automatically revoked after the time period expires.</p>
+                            </div>
+                            
+                            <div class="emergency-status" id="emergencyStatus">
+                                <div class="status-indicator inactive">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Emergency Access: Inactive</span>
+                                </div>
+                            </div>
+
+                            <div class="emergency-timer" id="emergencyTimer" style="display: none;">
+                                <div class="timer-display">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="timerValue">30:00</span>
+                                </div>
+                                <p class="timer-label">Time remaining</p>
+                            </div>
+
+                            <button class="btn btn-emergency" id="emergencyBtn">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Activate Emergency Access
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="section">
+            <div class="container">
+                <h1 class="section-title">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacy & Security Indicators
+                </h1>
+                
+                <div class="privacy-grid">
+
+                    <div class="card privacy-card">
+                        <div class="card-header">
+                            <h2>Security Status</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="indicator-item">
+                                <div class="indicator-icon encrypted">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="indicator-content">
+                                    <h4>Data Encryption</h4>
+                                    <p>All medical records are encrypted at rest and in transit</p>
+                                </div>
+                            </div>
+                            <div class="indicator-item">
+                                <div class="indicator-icon consent">
+                                    <i class="fas fa-hand-paper"></i>
+                                </div>
+                                <div class="indicator-content">
+                                    <h4>Consent Required</h4>
+                                    <p>Access requires explicit patient consent</p>
+                                </div>
+                            </div>
+                            <div class="indicator-item">
+                                <div class="indicator-icon emergency" id="emergencyIndicator">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="indicator-content">
+                                    <h4>Emergency Access</h4>
+                                    <p id="emergencyIndicatorText">Currently inactive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card privacy-card">
+                        <div class="card-header">
+                            <h2>Interoperability (Unified View)</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="interop-mini">
+                                <div class="interop-mini-row">
+                                    <span class="interop-mini-label">Source formats (hidden)</span>
+                                    <div class="interop-mini-badges" aria-label="Hidden source formats">
+                                        <span class="format-badge">JSON</span>
+                                        <span class="format-badge">XML</span>
+                                        <span class="format-badge">CSV</span>
+                                    </div>
+                                </div>
+
+                                <div class="interop-mini-row">
+                                    <span class="interop-mini-label">Portal view</span>
+                                    <span class="encrypted-badge">
+                                        <i class="fas fa-shield-alt"></i> Unified + Encrypted
+                                    </span>
+                                </div>
+
+                                <p class="interop-mini-note">
+                                    Your records can come from many hospitals and clinics using different data formats.
+                                    This app conceptually normalizes them into one <strong>unified</strong> representation so the UI stays consistent.
+                                    <strong>Raw JSON/XML/CSV is never shown</strong> to patients in this portal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card privacy-card">
+                        <div class="card-header">
+                            <h2>Access Log</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="access-log">
+                                <div class="log-entry">
+                                    <div class="log-icon normal">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <h4>Dr. Emily Rodriguez</h4>
+                                        <p>March 20, 2024 at 2:30 PM</p>
+                                        <span class="log-badge normal">Normal Access</span>
+                                    </div>
+                                </div>
+                                <div class="log-entry">
+                                    <div class="log-icon normal">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <h4>Dr. Michael Chen</h4>
+                                        <p>March 18, 2024 at 10:15 AM</p>
+                                        <span class="log-badge normal">Normal Access</span>
+                                    </div>
+                                </div>
+                                <div class="log-entry">
+                                    <div class="log-icon emergency-log">
+                                        <i class="fas fa-ambulance"></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <h4>Emergency Department</h4>
+                                        <p>January 5, 2024 at 8:45 PM</p>
+                                        <span class="log-badge emergency-log">Emergency Access</span>
+                                    </div>
+                                </div>
+                                <div class="log-entry">
+                                    <div class="log-icon normal">
+                                        <i class="fas fa-hospital"></i>
+                                    </div>
+                                    <div class="log-content">
+                                        <h4>Regional Imaging Center</h4>
+                                        <p>February 15, 2024 at 3:20 PM</p>
+                                        <span class="log-badge normal">Normal Access</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-title">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>med-app-secure – Secure Patient Medical Record Portal</span>
+                    </div>
+                    <p class="footer-brand-subtitle">Patient-centric access</p>
+                </div>
+
+                <div class="footer-social">
+                    <span class="footer-social-label">Follow:</span>
+                    <a class="social-icon" href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-icon" href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-icon" href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Patient tools</h3>
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#timeline">Medical History</a>
+                    <a href="#consent">Consent Management</a>
+                    <a href="#privacy">Access Log</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Security & privacy</h3>
+                    <a href="#dashboard">Encryption status</a>
+                    <a href="#consent">Consent required</a>
+                    <a href="#emergency">Emergency mode</a>
+                    <a href="#privacy">Indicators</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <a href="#">Privacy guide</a>
+                    <a href="#">Consent best practices</a>
+                    <a href="#">Security overview</a>
+                    <a href="#">Release notes</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="footerYear"></span> Srishti Secure Medical Demo Portal</span>
+                <a class="footer-backlink" href="#dashboard">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div id="consentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Grant Access Consent</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>You are about to grant access to your medical records to:</p>
+                <p class="modal-doctor-name" id="modalDoctorName"></p>
+                <div class="modal-details">
+                    <div class="modal-detail-item">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span>Access Duration: <strong id="modalDuration">24 hours</strong></span>
+                    </div>
+                    <div class="modal-detail-item">
+                        <i class="fas fa-lock"></i>
+                        <span>All data remains encrypted</span>
+                    </div>
+                    <div class="modal-detail-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>You can revoke access at any time</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="modalCancel">Cancel</button>
+                    <button class="btn btn-primary" id="modalConfirm">Confirm & Grant Access</button>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+    <div id="biometricModal" class="modal">
+        <div class="modal-content biometric-modal">
+            <div class="modal-header">
+                <h2>Emergency Access Authentication</h2>
+                <button class="modal-close" id="biometricModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="biometric-container">
+                    <div class="biometric-icon" id="biometricIcon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <p class="biometric-text" id="biometricText">Place your finger on the sensor</p>
+                    <div class="biometric-progress" id="biometricProgress" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="biometricCancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
